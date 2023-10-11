@@ -1,0 +1,3 @@
+<template>
+    <component src="super::Abc<A, B>"></component>
+</template>
