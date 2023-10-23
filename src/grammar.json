@@ -252,6 +252,10 @@
         {
           "type": "STRING",
           "value": "@"
+        },
+        {
+          "type": "STRING",
+          "value": "$"
         }
       ]
     },
@@ -495,8 +499,11 @@
       ]
     },
     "tag_source": {
-      "type": "PATTERN",
-      "value": "[^<]*"
+      "type": "REPEAT1",
+      "content": {
+        "type": "PATTERN",
+        "value": ".|\\n"
+      }
     },
     "style": {
       "type": "STRING",
@@ -516,6 +523,14 @@
         {
           "type": "STRING",
           "value": "events"
+        },
+        {
+          "type": "STRING",
+          "value": "setup"
+        },
+        {
+          "type": "STRING",
+          "value": "props"
         }
       ]
     },

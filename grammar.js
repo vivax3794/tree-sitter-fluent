@@ -29,7 +29,7 @@ module.exports = grammar({
             seq($.name, optional(seq($.eq, $.string))),
         ),
         rust_prefix: $ => choice(
-            ":", ";", "?", " =", "@"
+            ":", ";", "?", " =", "@", "$"
         ),
         rust_attribute: $ => seq($.rust_prefix, $.name, $.eq, $.rust_string),
         rust_string: $ => choice(
@@ -59,13 +59,15 @@ module.exports = grammar({
             $.tag_source,
             "</", $.style, ">"
         ),
-        tag_source: $ => /[^<]*/,
+        tag_source: $ => repeat1(/.|\n/),
         style: $ => "style",
 
         rust_tag: $ => choice(
             "define",
             "data",
             "events",
+            "setup",
+            "props"
         ),
         rust_block: $ => seq(
             "<", $.rust_tag, ">",

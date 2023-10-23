@@ -318,6 +318,11 @@
     }
   },
   {
+    "type": "tag_source",
+    "named": true,
+    "fields": {}
+  },
+  {
     "type": "template_block",
     "named": true,
     "fields": {},
@@ -338,6 +343,10 @@
   },
   {
     "type": " =",
+    "named": false
+  },
+  {
+    "type": "$",
     "named": false
   },
   {
@@ -409,6 +418,10 @@
     "named": true
   },
   {
+    "type": "props",
+    "named": false
+  },
+  {
     "type": "quote_1",
     "named": true
   },
@@ -419,6 +432,10 @@
   {
     "type": "reactive_source",
     "named": true
+  },
+  {
+    "type": "setup",
+    "named": false
   },
   {
     "type": "src",
@@ -434,10 +451,6 @@
   },
   {
     "type": "style",
-    "named": true
-  },
-  {
-    "type": "tag_source",
     "named": true
   },
   {
